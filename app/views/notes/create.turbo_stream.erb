@@ -2,5 +2,5 @@
 <% render @note %>
 <% end %>
 <%= turbo_stream.replace "note_form" do %>
-<%= render "form", note: Note %>
+<%= render "form", note: Note.new %>
 <% end %>
