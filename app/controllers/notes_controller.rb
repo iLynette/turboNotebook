@@ -37,6 +37,7 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(note_params)
+        format.turbo_stream
         format.html { redirect_to note_url(@note), notice: 'Note was successfully updated.' }
         format.json { render :show, status: :ok, location: @note }
       else
