@@ -1,5 +1,5 @@
 <%= turbo_stream.prepend "notes" do %>
-<% render @note %>
+<%= render @note %>
 <% end %>
 <%= turbo_stream.replace "note_form" do %>
 <%= render "form", note: Note.new %>
